@@ -652,8 +652,8 @@ font-size: 14px;
 line-height: 1.71;
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-backgroud .address:hover,
-.footer-backgroud .address:focus {
+.footer-backgroud a:hover,
+.footer-backgroud a:focus {
 color: #2196F3;   
 }        
 .contact {
@@ -665,12 +665,7 @@ line-height: 1.71;
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact:hover,
-.contact:focus {
-color: #2196F3;
-
-}
-    
+  
 .general {
 display: flex;
 align-items: baseline;
@@ -739,14 +734,17 @@ transition: opacity 300ms var(--cubic-bezier), visibility 300ms var(--cubic-bezi
 position: absolute;
 width: 528px;
 min-height: 581px;
+top: 50%;
+left: 50%;
+
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 background-color: #FFFFFF;
 border-radius: 4px;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%) scale(1);
-transition: transform 300ms var(--cubic-bezier);
+
+transform: translate(-50%, -50%) scaleX(1);
+transition: transform 500ms linear;
 }
+
     
 .backdrop .is-hidden .modal {
 transform: translate(-50%, -50%) scale(0);
@@ -758,19 +756,24 @@ opacity: 0;
 pointer-events: none;
 }
      
-.btn-cloze {
+.modal-close {
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
 position: absolute;
-top: 8px;
 right: 8px;
-border-radius: 50%;
+top: 8px;
+padding: 0;
 width: 30px;
 height: 30px;
+
+border-radius: 50%;
+background: var(--main-bg-color);
 border: 1px solid rgba(0, 0, 0, 0.1);
-cursor: pointer;
-background-color: transparent;
 }
     
-.btn-cloze-icon {
-width: 11px;
-height: 11px;
+.btn-close-icon {
+width: 18px;
+height: 18px;
 }
